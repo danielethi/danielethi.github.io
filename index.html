@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calc</title>
+    <script>
+        function compute(){
+            let userInput=document.getElementById("inp").value;
+            let splitted=userInput.split(",");
+            let sum = sum(splitted);
+            document.getElementById("sum").innerHTML=sum;
+            document.getElementById("avg").innerHTML=sum/splitted.length;
+
+            function sum(arr){
+                let sum=0;
+                for(let n of arr){
+                     sum+-Number(n)
+                }
+            return sum;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Enter comma separated values here</p>
+    <textarea id="inp" ></textarea></br>
+    <button onclick="compute()">compute</button><br>
+    sum:  <span id="sum"></span></br>
+    avg:  <span id="avg"></span>
+
+</body>
+</html>
