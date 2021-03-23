@@ -9,6 +9,7 @@ function nameString(obj) {
     // }else{
     //     return obj;
     // }
+    //or
     // if (obj === undefined) {
     //     return "no object passed";
     // }else if(obj===null){
