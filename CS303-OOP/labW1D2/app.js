@@ -4,11 +4,15 @@
 
 // See tests.js for behavior
 function nameString(obj) {
-    let result = 'name' in obj;
-    if(result===true){
-        return "object has properties";
+    if(Object.keys(obj).length===0){
+        return "object has no properties";
     }else{
-        return "object has no properties"
+        return obj;
     }
-  }
+
+   }
+  
+
+  
+
     
