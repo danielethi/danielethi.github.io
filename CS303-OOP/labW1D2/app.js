@@ -1,4 +1,7 @@
-function load() {
-	let id = document.getElementById("result");
-	id.innerHTML = "Lab W1D2";
+/* eslint-disable require-jsdoc */
+/* eslint-disable no-unused-vars */
+"use strict";
+
+// See tests.js for behavior
+function nameString(obj) {
 }
