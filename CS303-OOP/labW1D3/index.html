@@ -1,8 +1,55 @@
-<html>
-	<head>
-		<script src="app.js"></script>
-	</head>
-	<body onload="load()">
-	<div id="result"></div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">
+
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+            // chai has a lot of stuff, let's make assert global
+            let assert = chai.assert; // assert is global
+    </script>
+
+    <script src = "test.js"> </script>
+
+    <script>
+        function runTests() {   // tied to run tests button
+            mocha.setup("bdd");
+            mochaTests();
+            mocha.run();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Lab 3</h1>
+    <button onclick='runTests()'>Run tests</button>
+    <div id='mocha'></div>
+</body>
+
+<script>
+
+/* A random query string is used to thwart caching of app.js*/
+function appendScript(jsName) {
+    let url = jsName + "?v=v";
+    url += Math.trunc(40000 * Math.random()); // e.g. app.js?v=v34004
+
+    let script = document.createElement("script");
+    script.setAttribute("src", url);
+    document.body.appendChild(script);
+}
+
+/* Dynamically create the script element for app.js*/
+appendScript("app.js");
+</script>
 </html>
