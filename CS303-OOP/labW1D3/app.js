@@ -11,6 +11,8 @@ Creates an object that contains the following information from the "this" object
 	cntShortName	// count of property names shorter than 3 characters
 	cntReferences	// count of reference properties (use the typeof operator to compute this)
 }	
+*/
+
 
 function analyzer() {
 	let output = {};
