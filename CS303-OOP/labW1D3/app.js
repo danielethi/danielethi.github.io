@@ -11,26 +11,6 @@ Creates an object that contains the following information from the "this" object
 	cntShortName	// count of property names shorter than 3 characters
 	cntReferences	// count of reference properties (use the typeof operator to compute this)
 }	
-*/
-// let person = new Person(name,country,grades)
-
-// function analyzer() {
-// 	numProperties(){
-// 	let count=0;
-// 	for(let key in person){
-// 		count++
-	
-//     return count;
-// }
-
-
-// person.f=analyzer;
-// person.x=0;
-// let analysis=person.f()
-
-// (analysis.numProperties, 6);
-// (analysis.cntShortName, 2);
-// (analysis.cntReference, 1);
 
 function analyzer() {
 	let output = {};
