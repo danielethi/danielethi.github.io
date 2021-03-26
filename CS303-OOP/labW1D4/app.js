@@ -21,7 +21,7 @@ function removeEvenCharacters(string) {
 // Must use the reduce method of the Array object to do this!!!
 function sumPositiveNumbers(array) {
 	
-		let res = array.filter((item) => item > 0);
+		let res = array.filter((elems) => elems > 0);
 		let valSum = res.reduce((a,b) => (a + b), 0);
 		return valSum;
 	  }
