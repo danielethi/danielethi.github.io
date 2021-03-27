@@ -4,30 +4,17 @@
 
 function countSubstring(s, target) {
 
-        let count = 0;
-        let position = s.indexOf(target);
-    
-        while (position > -1) {
-            count++;
-            position = s.indexOf(target, position + 1);
-        }
-        return count;
-    }
+       
 
 // Save obj in localStorage
 function saveInLocalStorage(name, obj) {
    
-        return localStorage.setItem(name, JSON.stringify(obj));
-    
-    }
 
 
 // Return value of name in local storage
 function getFromLocalStorage(name) {
     
-        let retriveveName = localStorage.getItem(name);
-        return JSON.parse(retriveveName);
-    }
+   
     /*
      
     */
@@ -39,13 +26,7 @@ function getFromLocalStorage(name) {
 // addMissProperty tests the object bound to its "this" for the key of "obj" (e.g., location)
 // If the bound object doesn't have that key then the key and its value is added to the bound object.
 function addMissingProperty(obj) {
-    let key;
-    for (key in obj) {
-        if ("key" in this === false) {
-            return this.key = obj[key];
-        }
-    }
-}
+
 
 // Constructor function which creates object {name:name, country:country, creationData:...}
 // Where creationDate is the time that the object is created.
