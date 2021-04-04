@@ -2,7 +2,7 @@
 //from and ending with to
 
 function printNumbers(from, to){
-    for(let i=from;i<to;i++){
+    for(let i=from;i<=to;i++){
          console.log(i)
     }
 }
